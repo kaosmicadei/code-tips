@@ -1,0 +1,266 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8644,        256]
+NotebookOptionsPosition[      6737,        218]
+NotebookOutlinePosition[      7126,        234]
+CellTagsIndexPosition[      7083,        231]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["typesetting", "Chapter",
+ CellChangeTimes->{{3.8125217378136883`*^9, 
+  3.812521746601885*^9}},ExpressionUUID->"ec45f18a-abcb-4bfd-b24f-\
+c419f456fa49"],
+
+Cell[CellGroupData[{
+
+Cell["mathematical outputs", "Section",
+ CellChangeTimes->{{3.81252237459797*^9, 
+  3.812522378558022*^9}},ExpressionUUID->"21d6d4eb-3af9-4420-a3f6-\
+919daae4858c"],
+
+Cell["The standard form of Mathematica exhibit an expression like", "Text",
+ CellChangeTimes->{{3.812521954323449*^9, 3.812521961787229*^9}, {
+  3.8125221440374937`*^9, 
+  3.812522192564199*^9}},ExpressionUUID->"457180de-c587-4a93-bb03-\
+821005f1cb5e"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Abs", "[", "a", "]"}], "^", "2"}], ",", 
+     RowBox[{"f", "[", "b", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{".5", "*", "c"}], ",", 
+     RowBox[{"d", "/", "2"}]}], "}"}]}], "}"}]], "Input",
+ Evaluatable->False,
+ CellChangeTimes->{{3.8125217677040453`*^9, 3.81252180379215*^9}, {
+  3.812521846847991*^9, 3.812521864014008*^9}, {3.812522042058132*^9, 
+  3.8125220650959883`*^9}, {3.8125221100794983`*^9, 3.812522113534408*^9}, {
+  3.812522196333688*^9, 3.8125222012835197`*^9}, {3.812522408796879*^9, 
+  3.8125224114448223`*^9}},ExpressionUUID->"25c39f33-4c1e-47a8-9f34-\
+76921d4ce106"],
+
+Cell["is", "Text",
+ CellChangeTimes->{{3.812522211274974*^9, 
+  3.812522212923212*^9}},ExpressionUUID->"c5f7dc3a-b03d-46e6-a92a-\
+e03b32c19a44"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"Abs", "[", "a", "]"}], "2"], ",", 
+     RowBox[{"f", "[", "b", "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"0.5", " ", "c"}], ",", 
+     FractionBox["d", "2"]}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.812522424700041*^9, 
+  3.812522428292542*^9}},ExpressionUUID->"e591e616-d34d-4d52-81ed-\
+87d852232373"],
+
+Cell[TextData[{
+ "To look more \"mathematical\" we could use the function ",
+ StyleBox["TraditionalForm", "Code"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.8125222542259617`*^9, 
+  3.812522341214677*^9}},ExpressionUUID->"357b343d-628b-426e-978c-\
+1ad0b975d92d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TraditionalForm", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Abs", "[", "a", "]"}], "^", "2"}], ",", 
+      RowBox[{"f", "[", "b", "]"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{".5", "*", "c"}], ",", 
+      RowBox[{"d", "/", "2"}]}], "}"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.812521874293747*^9, 3.812521875936318*^9}, {
+  3.8125220908012743`*^9, 3.812522120470084*^9}, {3.812522397342795*^9, 
+  3.8125224181514463`*^9}, {3.812522453788869*^9, 3.812522454829859*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"e6f5b5e2-3488-49be-8a0d-222b6321a2bc"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {
+      SuperscriptBox[
+       TemplateBox[{"a"},
+        "Abs"], "2"], 
+      RowBox[{"f", "(", "b", ")"}]},
+     {
+      RowBox[{"0.5`", " ", "c"}], 
+      FractionBox["d", "2"]}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}], TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.812521876971435*^9, {3.812522091991519*^9, 3.8125221211084967`*^9}, {
+   3.8125223998204393`*^9, 3.812522418520289*^9}, 3.812522455194112*^9},
+ CellLabel->
+  "Out[25]//TraditionalForm=",ExpressionUUID->"d4cb856e-701b-40cf-9ac1-\
+ae38fff26fd5"]
+}, Open  ]],
+
+Cell["\<\
+But instead to use the TraditionalForm all the time we can set the \
+Mathematica to always look like the. \
+\>", "Text",
+ CellChangeTimes->{
+  3.812522942427511*^9},ExpressionUUID->"35713ee8-b275-418f-84a2-\
+7ebe8ca60623"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Open the menu ",
+ StyleBox["Format > Option Inspector...", "CodeText"]
+}], "ItemNumbered",
+ CellChangeTimes->{{3.81252252892833*^9, 
+  3.812522924885736*^9}},ExpressionUUID->"69a6f233-cb62-40cd-9f81-\
+af0d7d54e0cc"],
+
+Cell[TextData[{
+ "In \"Show Option Values\" we select \"Global Preferences\". Then on the \
+side list we select ",
+ StyleBox["Cell Options > New Cell Defaults >  CommonDefaultTypes", 
+  "CodeText"],
+ "."
+}], "ItemNumbered",
+ CellChangeTimes->{{3.81252252892833*^9, 
+  3.812522895030364*^9}},ExpressionUUID->"38052271-13a6-4bce-af3a-\
+38ee30ead14b"],
+
+Cell["\<\
+On the row \"Output\" we need to replace \"StandardForm\" by \
+\"TraditionalForm\". Then it's just apply the new configurations.\
+\>", "ItemNumbered",
+ CellChangeTimes->{{3.81252252892833*^9, 3.8125228945738792`*^9}, {
+  3.812522949747739*^9, 
+  3.812522950483974*^9}},ExpressionUUID->"f5ca7202-eaeb-4391-ab8f-\
+c2de5c2ede9e"]
+}, Open  ]],
+
+Cell["\<\
+This will show the mathematical form in all notebooks. 
+
+Alternatively we can set the notebook itself to always use the \
+TraditionalFrom no matter where it is opened. To do so we type at the \
+beginning of the notebook \
+\>", "Text",
+ CellChangeTimes->{{3.812522954418619*^9, 
+  3.8125231262461348`*^9}},ExpressionUUID->"1fd33dd4-4b44-4eef-a526-\
+6a71f0ea2d23"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"$PrePrint", " ", "=", " ", "TraditionalForm"}], ";"}]], "Code",
+ CellChangeTimes->{{3.812523129522265*^9, 
+  3.812523141286448*^9}},ExpressionUUID->"54340738-28ed-4153-97de-\
+127a8c369861"]
+}, Open  ]],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   StyleBox[
+    RowBox[{"L", 
+     StyleBox[
+      AdjustmentBox["A",
+       BoxBaselineShift->-0.4,
+       BoxMargins->{{-0.5, -0.3}, {0, 0}}],
+      FontSize->Smaller], "T", 
+     AdjustmentBox["E",
+      BoxBaselineShift->0.5,
+      BoxMargins->{{-0.3, 0}, {0, 0}}], "X"}],
+    SingleLetterItalics->False], TraditionalForm]],ExpressionUUID->
+  "8750c4b0-4ed1-4f03-bbf0-fa21b6992397"],
+ " inputs and outputs"
+}], "Section",
+ CellChangeTimes->{{3.812523343871602*^9, 
+  3.812523353974772*^9}},ExpressionUUID->"4f9d0048-ade9-46c5-97ef-\
+911d01343276"]
+}, Open  ]]
+},
+WindowSize->{638, 1052},
+WindowMargins->{{Automatic, 1}, {1, Automatic}},
+FrontEndVersion->"12.1 for Linux x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"2da50117-518a-4111-a902-6f193d21e3a1"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 158, 3, 69, "Chapter",ExpressionUUID->"ec45f18a-abcb-4bfd-b24f-c419f456fa49"],
+Cell[CellGroupData[{
+Cell[763, 29, 164, 3, 67, "Section",ExpressionUUID->"21d6d4eb-3af9-4420-a3f6-919daae4858c"],
+Cell[930, 34, 252, 4, 35, "Text",ExpressionUUID->"457180de-c587-4a93-bb03-821005f1cb5e"],
+Cell[1185, 40, 709, 18, 30, "Input",ExpressionUUID->"25c39f33-4c1e-47a8-9f34-76921d4ce106",
+ Evaluatable->False],
+Cell[1897, 60, 144, 3, 35, "Text",ExpressionUUID->"c5f7dc3a-b03d-46e6-a92a-e03b32c19a44"],
+Cell[2044, 65, 441, 14, 50, "Output",ExpressionUUID->"e591e616-d34d-4d52-81ed-87d852232373"],
+Cell[2488, 81, 259, 7, 35, "Text",ExpressionUUID->"357b343d-628b-426e-978c-1ad0b975d92d"],
+Cell[CellGroupData[{
+Cell[2772, 92, 659, 16, 30, "Input",ExpressionUUID->"e6f5b5e2-3488-49be-8a0d-222b6321a2bc"],
+Cell[3434, 110, 869, 25, 77, "Output",ExpressionUUID->"d4cb856e-701b-40cf-9ac1-ae38fff26fd5"]
+}, Open  ]],
+Cell[4318, 138, 232, 6, 58, "Text",ExpressionUUID->"35713ee8-b275-418f-84a2-7ebe8ca60623"],
+Cell[CellGroupData[{
+Cell[4575, 148, 233, 6, 32, "ItemNumbered",ExpressionUUID->"69a6f233-cb62-40cd-9f81-af0d7d54e0cc"],
+Cell[4811, 156, 348, 9, 53, "ItemNumbered",ExpressionUUID->"38052271-13a6-4bce-af3a-38ee30ead14b"],
+Cell[5162, 167, 336, 7, 53, "ItemNumbered",ExpressionUUID->"f5ca7202-eaeb-4391-ab8f-c2de5c2ede9e"]
+}, Open  ]],
+Cell[5513, 177, 372, 9, 104, "Text",ExpressionUUID->"1fd33dd4-4b44-4eef-a526-6a71f0ea2d23"],
+Cell[5888, 188, 224, 5, 52, "Code",ExpressionUUID->"54340738-28ed-4153-97de-127a8c369861"]
+}, Open  ]],
+Cell[6127, 196, 594, 19, 67, "Section",ExpressionUUID->"4f9d0048-ade9-46c5-97ef-911d01343276"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
