@@ -1,4 +1,4 @@
-module AutoErrorPropag
+module Autoerror
 
 export Dual, uncert
 
