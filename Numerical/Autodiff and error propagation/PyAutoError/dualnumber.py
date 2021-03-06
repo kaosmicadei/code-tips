@@ -58,17 +58,57 @@ class Dual:
 
     def __rtruediv__(self, x):
         return Dual(x, [0]).__truediv__(self)
-            
+
+def asdual(*args):
+    '''Create and array of dual number variables.'''
+    basis = np.identity(len(args))
+    variables = []
+    for i, value in enumerate(args):
+        variables.append(Dual(value, basis[:,i]))
+    return variables
+
+# Basic functions
 def sqrt(x):
     if isinstance(x, Dual):
         return Dual(np.sqrt(x.value), x.gradient / np.sqrt(x.value))
     return np.sqrt(x)
 
-def uncert(f, sigmas):
-    x = f.gradient * sigmas
-    return sqrt(x.dot(x))
+def exp(x):
+    if isinstance(x, Dual):
+        return Dual(np.exp(x.value), np.exp(x.value) * x.gradient)
+    return np.exp(x)
 
-x = Dual(1,[1,0,0])
-y = Dual(2,[0,1,0])
-z = Dual(3,[0,0,1])
-print(sqrt(2))
+def log(x):
+    if isinstance(x, Dual):
+        return Dual(np.log(x.value), x.gradient / x.value)
+    return np.log(x)
+
+def sin(x):
+    if isinstance(x, Dual):
+        return Dual(np.sin(x.value), np.cos(x.value) * x.gradient)
+    return np.sin(x)
+
+def sinh(x):
+    if isinstance(x, Dual):
+        return Dual(np.sinh(x.value), np.cosh(x.value) * x.gradient)
+    return np.sinh(x)
+
+def cos(x):
+    if isinstance(x, Dual):
+        return Dual(np.cos(x.value), -np.sin(x.value) * x.gradient)
+    return np.cos(x)
+
+def cosh(x):
+    if isinstance(x, Dual):
+        return Dual(np.cosh(x.value), np.sinh(x.value) * x.gradient)
+    return np.cosh(x)
+
+def tan(x):
+    if isinstance(x, Dual):
+        return Dual(np.tan(x.value), x.gradient / np.cos(x.value)**2)
+    return np.tan(x)
+
+def tanh(x):
+    if isinstance(x, Dual):
+        return Dual(np.tanh(x.value), x.gradient / np.cosh(x.value)**2)
+    return np.tanh(x)
