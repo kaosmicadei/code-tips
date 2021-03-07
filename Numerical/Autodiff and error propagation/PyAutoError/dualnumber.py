@@ -10,7 +10,7 @@ class Dual:
             raise ValueError
 
     def __str__(self):
-        return "{} + {}".format(self.value, self.gradient)
+        return "{} + {}".format(self.value, list(self.gradient))
     
     # ADDITION
     def __add__(self, x):
@@ -59,13 +59,15 @@ class Dual:
     def __rtruediv__(self, x):
         return Dual(x, [0]).__truediv__(self)
 
-def asdual(*args):
+def asdual(x):
     '''Create and array of dual number variables.'''
-    basis = np.identity(len(args))
-    variables = []
-    for i, value in enumerate(args):
-        variables.append(Dual(value, basis[:,i]))
-    return variables
+    if isinstance(x, list):
+        basis = np.identity(len(x))
+        variables = []
+        for i, value in enumerate(x):
+            variables.append(Dual(value, basis[:,i]))
+        return variables
+    return Dual(x,[1])
 
 # Basic functions
 def sqrt(x):
