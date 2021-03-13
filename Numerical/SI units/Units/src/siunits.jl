@@ -1,12 +1,3 @@
-module SIUnits
-
-export hour, min, s, ms, μs, ns,
-       km, m, cm, mm, μm, nm,
-       ton, kg, g, mg, μg,
-       A, mA,
-       K, mK,
-       mol, cd
-
 struct SIUnit <: Number
   value::Real
   units::Vector{Real}
@@ -31,7 +22,7 @@ const K   = SIUnit(1, [0,0,0,0,1,0,0])    # kelvin
 const mol = SIUnit(1, [0,0,0,0,0,1,0])    # mol
 const cd  = SIUnit(1, [0,0,0,0,0,0,1])    # candela
 
-# STANDARD UNITS
+# COMMON USED UNITS
 # time
 const hour = 3_600s # hour
 const min = 60s     # minute
@@ -57,5 +48,3 @@ const mA = 1e-3A    # miliampere
 
 # temperature
 const mK = 1e-3K    # milikelvin
-
-end
