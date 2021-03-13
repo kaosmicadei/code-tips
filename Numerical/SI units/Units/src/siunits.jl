@@ -8,10 +8,21 @@ Base.promote_rule(::Type{SIUnit}, ::Type{<:Real}) = SIUnit
 
 Base.:+(x::SIUnit, y::SIUnit) = x.units == y.units ? SIUnit(x.value + y.value, x.units) : error("Incompatible dimensions")
 Base.:-(x::SIUnit, y::SIUnit) = x.units == y.units ? SIUnit(x.value - y.value, x.units) : error("Incompatible dimensions")
-Base.:*(x::SIUnit, y::SIUnit) = SIUnit(x.value * y.value, x.units .+ y.units)
-Base.:/(x::SIUnit, y::SIUnit) = SIUnit(x.value / y.value, x.units .- y.units)
-
 Base.:-(x::SIUnit) = SIUnit(-x.value, x.units)
+
+Base.:*(x::SIUnit, y::SIUnit) = let
+  value = x.value * y.value
+  units = x.units .+ y.units
+  if iszero(units); return value; end
+  SIUnit(value, units)
+end
+
+Base.:/(x::SIUnit, y::SIUnit) = let
+  value = x.value / y.value
+  units = x.units .- y.units
+  if iszero(units); return value; end
+  SIUnit(value, units)
+end
 
 # BASIC UNITS
 const s   = SIUnit(1, [1,0,0,0,0,0,0])    # second
