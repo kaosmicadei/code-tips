@@ -1,6 +1,6 @@
 module Autoerror
 
-include("dualnumber.jl")
+include("dualnumbers.jl")
 include("basic_extensions.jl")
 
 function uncert(f::Dual, σ::Vector{<:Real})
