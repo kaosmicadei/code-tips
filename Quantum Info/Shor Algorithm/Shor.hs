@@ -8,7 +8,7 @@ factorize n =
   in head factors
   where
     validFactors (p, q) = p < n && q < n
-   
+
 evenPeriodOf :: Integer -> Integer -> Integer
 evenPeriodOf n base = go 2
   where
