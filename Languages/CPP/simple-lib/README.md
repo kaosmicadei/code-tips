@@ -1,0 +1,1 @@
+A simple example of how create an static library on C++.
